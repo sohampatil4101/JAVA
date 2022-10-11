@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Percentagecalc {
+    
+    public static void main(String[] args) 
+    {   
+        System.out.println("Enter number of subjects to calculate percentege:");
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        float sub[]= new float[n+1];
+        float tot[]= new float[n+1];
+        for(int i=1; i<=n; i++){
+            System.out.println("Enter marks scored in subject "+i);
+            sub[i]=sc.nextFloat();
+            System.out.println("Enter total marks in subject "+i);
+            tot[i]=sc.nextFloat();
+           
+            }
+    float m[] = new float[n+1];
+    float o=0;
+        for(int i=1; i<=n; i++){
+            m[i]=(sub[i])/(tot[i])*100;
+            System.out.println("You scored "+m[i]+" percntage in"+i+"subject");
+            o=o+m[i]; 
+            }
+        
+             System.out.println("Your overall percentage is "+o);
+    }
+}
